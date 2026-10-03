@@ -40,7 +40,7 @@ HTML5, CSS3 and the Plus Jakarta Sans font from Google Fonts.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
+   git clone https://github.com/<mansi thakre>/<Mansi-Portfolio>.git
    ```
 2. Open the folder and double-click `index.html` to view it in your browser.
 
