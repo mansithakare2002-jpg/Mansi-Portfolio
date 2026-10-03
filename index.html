@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mansi Thakre | Data Analyst</title>
+<meta name="description" content="Mansi Thakre, fresher Data Analyst in Nagpur, India. Python, SQL, Power BI and machine learning projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F8FB; --surface:#FFFFFF; --ink:#0E1B2C; --muted:#52627A; --line:#DCE3EC;
+  --accent:#0B6E6A; --accent-soft:#DDF0EE; --on-accent:#FFFFFF;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1520; --surface:#131E2C; --ink:#EAF0F7; --muted:#9AAAC0; --line:#24334A;
+    --accent:#4FD1C5; --accent-soft:#12302F; --on-accent:#08201F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1520; --surface:#131E2C; --ink:#EAF0F7; --muted:#9AAAC0; --line:#24334A;
+  --accent:#4FD1C5; --accent-soft:#12302F; --on-accent:#08201F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font-weight:800;letter-spacing:-.01em}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
+h1{margin-top:0;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;letter-spacing:-.035em;line-height:1.05}
+.role{font-size:1.25rem;font-weight:600;color:var(--accent);margin:12px 0 22px}
+.lede{color:var(--muted);max-width:52ch;font-size:1.06rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;font-weight:600;font-size:.95rem;padding:13px 24px;border-radius:8px;border:1px solid var(--line);transition:transform .2s,background .2s}
+.btn.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+.btn.ghost:hover{background:var(--surface)}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px}
+.panel h2{font-size:.95rem;font-weight:700;margin-bottom:16px}
+.panel dl div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--line);font-size:.93rem}
+.panel dt{color:var(--muted)}
+.panel dd{font-weight:600;text-align:right}
+
+section{padding:76px 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:220px 1fr;gap:40px}
+h2.title{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+.about p{color:var(--muted);max-width:64ch;font-size:1.04rem}
+.about p+p{margin-top:16px}
+.about strong{color:var(--ink);font-weight:600}
+
+.skills div.row{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.skills .row:first-child{padding-top:0}
+.skills .k{font-weight:600}
+.skills .v{color:var(--muted)}
+
+.proj{padding:28px 0;border-bottom:1px solid var(--line)}
+.proj:first-child{padding-top:0}
+.proj:last-child{border-bottom:none;padding-bottom:0}
+.proj-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.proj h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+.type{font-size:.82rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:3px 12px;border-radius:999px}
+.proj ul{margin:14px 0 0 18px;color:var(--muted);font-size:.97rem}
+.proj li{margin-bottom:5px}
+.stack{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.stack span{font-size:.82rem;font-weight:500;border:1px solid var(--line);background:var(--surface);padding:3px 11px;border-radius:6px}
+
+.edu .row{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.edu .row:first-child{padding-top:0}
+.edu .row:last-child{border-bottom:none;padding-bottom:0}
+.edu b{display:block;font-weight:600}
+.edu small{color:var(--muted);font-size:.93rem}
+.edu .yr{font-weight:600;color:var(--accent);white-space:nowrap}
+
+.contact-lead{color:var(--muted);max-width:52ch;margin-bottom:26px}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.link{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:border-color .2s}
+a.link:hover{border-color:var(--accent)}
+.link small{display:block;color:var(--muted);font-size:.82rem;margin-bottom:2px}
+.link span{font-weight:600;overflow-wrap:anywhere}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.88rem}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:40px;padding:56px 0 52px}
+  .head{grid-template-columns:1fr;gap:22px}
+  .skills div.row{grid-template-columns:1fr;gap:2px}
+  section{padding:56px 0}
+}
+@media (max-width:520px){
+  .wrap{padding:0 20px}
+  .nav ul{gap:16px}
+  .nav ul a{font-size:.85rem}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Mansi Thakre</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Mansi Thakre</h1>
+      <p class="role">Data Analyst</p>
+      <p class="lede">I turn raw data into clear findings people can act on. I work with Python, SQL and Power BI, and have built forecasting, chatbot and dashboard projects.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <aside class="panel" aria-label="Summary">
+      <h2>At a glance</h2>
+      <dl>
+        <div><dt>Location</dt><dd>Nagpur, India</dd></div>
+        <div><dt>Education</dt><dd>B.Tech, ECE (2025)</dd></div>
+        <div><dt>Training</dt><dd>Data Science with Gen AI</dd></div>
+        <div><dt>Core tools</dt><dd>Python, SQL, Power BI</dd></div>
+      </dl>
+    </aside>
+  </div>
+</div>
+
+<section id="about"><div class="wrap head">
+  <h2 class="title">About</h2>
+  <div class="about">
+    <p>I am an aspiring <strong>Data Analyst</strong> with a strong foundation in <strong>Python, SQL and data visualization</strong>. My background is in Electronics and Communication Engineering, and I moved into data through hands-on project work: regression modeling, LLM-based tools and interactive dashboards.</p>
+    <p>I enjoy turning a messy dataset into something a non-technical stakeholder can understand and act on. I am looking to bring that approach to a data-driven team as a fresher.</p>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap head">
+  <h2 class="title">Skills</h2>
+  <div class="skills">
+    <div class="row"><div class="k">Programming</div><div class="v">Python, SQL</div></div>
+    <div class="row"><div class="k">Libraries</div><div class="v">NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn</div></div>
+    <div class="row"><div class="k">Tools</div><div class="v">Power BI, Jupyter, Git, VS Code, Google Colab</div></div>
+    <div class="row"><div class="k">Databases</div><div class="v">MySQL</div></div>
+    <div class="row"><div class="k">Concepts</div><div class="v">Data cleaning, EDA, machine learning models, statistics</div></div>
+    <div class="row"><div class="k">Working style</div><div class="v">Collaboration, communication, leadership</div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap head">
+  <h2 class="title">Projects</h2>
+  <div>
+    <article class="proj">
+      <div class="proj-top"><h3>Sales Forecasting Model</h3><span class="type">Machine learning</span></div>
+      <ul>
+        <li>Built a regression model to forecast sales from historical business data.</li>
+        <li>Handled preprocessing and feature engineering to improve prediction quality.</li>
+        <li>Produced insights to support inventory and revenue planning.</li>
+      </ul>
+      <div class="stack"><span>Python</span><span>Pandas</span><span>Scikit-Learn</span></div>
+    </article>
+    <article class="proj">
+      <div class="proj-top"><h3>Generative AI Chatbot</h3><span class="type">Generative AI</span></div>
+      <ul>
+        <li>Built an LLM-powered chatbot that answers natural language queries.</li>
+        <li>Applied prompt engineering and conversational context management.</li>
+        <li>Integrated APIs to improve response accuracy and user experience.</li>
+      </ul>
+      <div class="stack"><span>Python</span><span>LLM APIs</span><span>Prompt engineering</span></div>
+    </article>
+    <article class="proj">
+      <div class="proj-top"><h3>Business Intelligence Dashboard</h3><span class="type">Visualization</span></div>
+      <ul>
+        <li>Designed interactive dashboards for KPIs, sales trends and customer insights.</li>
+        <li>Combined multiple data sources with dynamic filtering.</li>
+        <li>Enabled faster, data-driven decisions.</li>
+      </ul>
+      <div class="stack"><span>Power BI</span><span>SQL</span></div>
+    </article>
+    <article class="proj">
+      <div class="proj-top"><h3>Student Performance Analyzer</h3><span class="type">Data analysis</span></div>
+      <ul>
+        <li>Cleaned a dataset using mean imputation to handle missing values.</li>
+        <li>Computed per-student and per-subject aggregates with Pandas.</li>
+        <li>Visualized subject-wise averages in a Matplotlib bar chart.</li>
+      </ul>
+      <div class="stack"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+    </article>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap head">
+  <h2 class="title">Education</h2>
+  <div class="edu">
+    <div class="row"><div><b>B.Tech, Electronics and Communication Engineering</b><small>Tulsiramji Gaikwad College of Engineering and Technology</small></div><div class="yr">2025</div></div>
+    <div class="row"><div><b>Data Science Course with Gen AI</b><small>Medha Edu Tech</small></div><div class="yr">2025 to 2026</div></div>
+    <div class="row"><div><b>Diploma, Electronics and Telecommunication</b><small>Raisoni College, Nagpur</small></div><div class="yr">2022</div></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap head">
+  <h2 class="title">Contact</h2>
+  <div>
+    <p class="contact-lead">I am available for fresher Data Analyst roles and happy to talk about my projects. Email is the fastest way to reach me.</p>
+    <div class="links">
+      <a class="link" href="mailto:mansithakare2002@gmail.com"><small>Email</small><span>mansithakare2002@gmail.com</span></a>
+      <a class="link" href="tel:+919518927351"><small>Phone</small><span>+91 95189 27351</span></a>
+      <a class="link" href="https://linkedin.com/in/mansi-thakare-829699318/" target="_blank" rel="noopener"><small>LinkedIn</small><span>mansi-thakare-829699318</span></a>
+      <div class="link"><small>Location</small><span>Nagpur, Maharashtra, India</span></div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 Mansi Thakre</div></footer>
+</body>
+</html>
